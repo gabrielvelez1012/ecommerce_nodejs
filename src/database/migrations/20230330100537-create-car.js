@@ -10,7 +10,9 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        
       },
       totalPrice: {
         type: Sequelize.FLOAT

@@ -15,7 +15,12 @@ module.exports = {
       },
       userId: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: "users",
+          key: "id"
+        },
+        field: "user_id"
       },
       status: {
         type: Sequelize.BOOLEAN,

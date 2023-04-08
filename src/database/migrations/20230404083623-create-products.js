@@ -29,7 +29,12 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       userId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: "users",
+          key: "id"
+        },
+        field: "user_id"
       },
       productImage: {
         type: Sequelize.STRING
