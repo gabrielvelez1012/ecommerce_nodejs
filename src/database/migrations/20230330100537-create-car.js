@@ -12,7 +12,11 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        
+        references: {
+          model: "users",
+          key: "id"
+        },
+        field: "user_id" 
       },
       totalPrice: {
         type: Sequelize.FLOAT
